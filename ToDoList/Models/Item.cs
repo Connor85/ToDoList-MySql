@@ -38,7 +38,7 @@ namespace ToDoList.Models
       {
         int itemId = rdr.GetInt32(0);
         string itemDescription = rdr.GetString(1);
-        string dueDate = rdr.GetString(2);
+        string dueDate = rdr.GetDateTime(2).ToString();
         Item newItem = new Item(dueDate, itemDescription, itemId);
         allItems.Add(newItem);
       }
